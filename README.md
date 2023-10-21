@@ -18,4 +18,4 @@ Proporciona consejos y recomendaciones personalizados para optimizar el uso de r
 | Figura | Figura | Figura |
 |--------|--------|--------|
 | ![imagen](ruta)|![imagen](ruta) |![imagen](ruta) |
-| ![imagen](ruta)|![imagen](ruta) |![imagen](ruta) |
+| ![imagen](ruta)|![imagen](ruta) |![imagen](Figma_pantallas/Pantalla_6.png) |
