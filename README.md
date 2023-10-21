@@ -13,3 +13,9 @@ La pantalla principal sirve como punto de partida y proporciona acceso a otras s
 Muestra estadísticas detalladas sobre el consumo de recursos en el huerto urbano. Calcula y muestra el consumo promedio de agua por planta, el valor del agua y el mes en el que se realizó el mayor consumo. Permite a los usuarios comparar el consumo de energía durante períodos específicos y analizar el costo asociado a la energía.
 # 6. Pantalla de Consejos: 
 Proporciona consejos y recomendaciones personalizados para optimizar el uso de recursos en el huerto urbano. Ofrece sugerencias para un riego más eficiente, la utilización de energía renovable y la aplicación adecuada de abono.
+
+## Solución 
+| Figura | Figura | Figura |
+|--------|--------|--------|
+| ![imagen](ruta)|![imagen](ruta) |![imagen](ruta) |
+| ![imagen](ruta)|![imagen](ruta) |![imagen](ruta) |
