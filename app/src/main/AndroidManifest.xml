@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".PuntoVerdesActivity" />
+        <activity android:name=".EstadisticasActivity" />
+        <activity android:name=".TipsConsejosActivitys" />
     </application>
 
 </manifest>
