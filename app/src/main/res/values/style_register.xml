@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="linearLayoutThemeRegister">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">25dp</item>
+        <item name="android:radius">20dp</item>
+        <item name="android:background">@drawable/round_layout</item>
+    </style>
+
+    <style name="linearLayoutButtonsRegister">
+        <item name="android:background">@drawable/round_layout_buttons_login</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+    </style>
+
+    <style name="tv_welcome_register">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="edt_email_register">
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColorHint">@color/green</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="edt_password_register">
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColorHint">@color/green</item>
+    </style>
+
+    <!--Checkbox-->
+    <style name="MyCheckBoxRegister" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+    <style name="chx1_register">
+        <item name="android:textSize">18sp</item>
+        <item name="android:buttonTint">@color/green</item>
+        <item name="android:theme">@style/MyCheckBoxRegister</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="chx2_register">
+        <item name="android:textSize">18sp</item>
+        <item name="android:buttonTint">@color/green</item>
+        <item name="android:theme">@style/MyCheckBoxRegister</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="btn_login_register">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="btn_register_register">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+
+    </style>
+
+
+</resources>
