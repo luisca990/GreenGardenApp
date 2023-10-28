@@ -10,14 +10,23 @@ import android.widget.Button;
 public class RegisterActivity extends AppCompatActivity {
 
     Button btn_login;
+    Button btn_register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         btn_login = findViewById(R.id.btnGoLogin);
+        btn_register = findViewById(R.id.btn_register);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

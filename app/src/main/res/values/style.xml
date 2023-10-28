@@ -73,4 +73,12 @@
         <item name="android:layout_marginBottom">25dp</item>
     </style>
 
+    <!--Titulos-->
+    <style name="titulos">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:layout_marginBottom">25dp</item>
+    </style>
+
 </resources>

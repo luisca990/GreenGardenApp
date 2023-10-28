@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="botones">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:padding">10sp</item>
+        <item name="android:radius">20dp</item>
+    </style>
+
+
+</resources>

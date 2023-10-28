@@ -27,10 +27,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PrincipalActivity" />
-        <activity android:name=".PuntoVerdesActivity" />
-        <activity android:name=".EstadisticasActivity" />
-        <activity android:name=".TipsConsejosActivitys" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".PuntoVerdesActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".EstadisticasActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".TipsConsejosActivitys"
+            android:exported="false"/>
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
