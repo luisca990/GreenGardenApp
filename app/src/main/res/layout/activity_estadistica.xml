@@ -7,25 +7,126 @@
     android:layout_height="match_parent"
     tools:context=".EstadisticasActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/headerLine"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EJEMPLO PARA NAVEGAR - ESTADISTICA"
-        android:layout_margin="100sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        >
 
-    <Button
-        android:id="@+id/ejemploEstadistica"
-        android:layout_width="wrap_content"
+        <!-- Línea como encabezado -->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:background="@color/green"/>
+
+        <ImageButton
+            android:id="@+id/LogoTemp"
+            style="@style/LogoTemp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/TextoCategorias"
+            style="@style/TextoCategorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/title_activity_esta" />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/linearLayoutThemeEsta"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EJEMPLO PARA NAVEGAR - ESTADISTICA"
-        android:layout_margin="200sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/headerLine"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintBottom_toTopOf="@id/footerLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_e1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            card_view:cardCornerRadius="10dp"
+            android:background="@color/gray"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/txt_title_e1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_title_e1"
+                style="@style/txt_title_cv_esta"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_e2"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            card_view:cardCornerRadius="10dp"
+            android:background="@color/gray"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/txt_title_e2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_title_e2"
+                style="@style/txt_title_cv_esta"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_e3"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            card_view:cardCornerRadius="10dp"
+            android:background="@color/gray"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/txt_title_e3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_title_e3"
+                style="@style/txt_title_cv_esta"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <!-- Línea y texto en el pie de página -->
+    <FrameLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Línea en el pie de página -->
+        <View
+            android:id="@+id/footerLine"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/green"/>
+
+        <!-- Texto en el pie de página -->
+        <TextView
+            android:id="@+id/footerText"
+            style="@style/footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VOLVER"/>
+    </FrameLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -80,4 +80,13 @@
         <item name="android:textColor">@color/green</item>
     </style>
 
+    <!---Txt styles-->
+    <style name="txt_title_cv_esta">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/green</item>
+    </style>
+
 </resources>
