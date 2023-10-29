@@ -7,17 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".PrincipalActivity">
 
-    <!-- Línea como encabezado -->
-    <View
+    <FrameLayout
         android:id="@+id/headerLine"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/green"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bienvenidoCategoriaTitulo1"
+        android:layout_marginBottom="45dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@color/green" />
+
+        <ImageButton
+            android:id="@+id/LogoTemp"
+            style="@style/LogoTemp"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </FrameLayout>
 
     <TextView
-        style="@style/titulos"
         android:id="@+id/bienvenidoCategoriaTitulo1"
+        style="@style/titulos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BIENVENIDO A"
@@ -28,8 +41,8 @@
         android:textColor="@color/green"
         />
     <TextView
-        style="@style/titulos"
         android:id="@+id/bienvenidoCategoriaTitulo2"
+        style="@style/titulos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A GREEN GARDEN"
@@ -38,55 +51,56 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="200dp"
         />
-
-    <!-- Un LinearLayout horizontal con algunos elementos dentro -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bienvenidoCategoriaTitulo2"
+        android:orientation="vertical"
         android:layout_marginTop="30dp"
-        android:gravity="center"
-        >
-
-        <!-- Elementos dentro del LinearLayout -->
-
-        <ImageButton
-            android:id="@+id/tipsConsejos"
-            style="@style/botones"
-            android:src="@drawable/tipsconsejos"
-            />
-
-        <ImageButton
-            android:id="@+id/puntosVerdes"
-            style="@style/botones"
-            android:src="@drawable/puntosverdes" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bienvenidoCategoriaTitulo2"
-        android:layout_marginTop="180dp"
+        app:layout_constraintTop_toBottomOf="@id/bienvenidoCategoriaTitulo2">
 
-        >
+        <LinearLayout
+            android:id="@+id/linearLayoutIconos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            >
 
-        <!-- Elementos dentro del LinearLayout -->
+            <!-- Elementos dentro del LinearLayout -->
 
-        <ImageButton
-            android:id="@+id/categorias"
-            style="@style/botones"
-            android:src="@drawable/categorias"/>
+            <ImageButton
+                android:id="@+id/tipsConsejos"
+                style="@style/botones"
+                android:src="@drawable/tipsconsejos"
+                />
 
-        <ImageButton
-            android:id="@+id/estadisticas"
-            style="@style/botones"
-            android:src="@drawable/estadisticas"/>
+            <ImageButton
+                android:id="@+id/puntosVerdes"
+                style="@style/botones"
+                android:src="@drawable/puntosverdes" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutIconos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            >
+            <!-- Elementos dentro del LinearLayout -->
+            <ImageButton
+                android:id="@+id/categorias"
+                style="@style/botones"
+                android:src="@drawable/categorias"/>
+
+            <ImageButton
+                android:id="@+id/estadisticas"
+                style="@style/botones"
+                android:src="@drawable/estadisticas"/>
+        </LinearLayout>
     </LinearLayout>
 
     <!-- Línea y texto en el pie de página -->

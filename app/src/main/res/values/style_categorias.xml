@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextoCategorias">
+        <item name="android:layout_marginTop">120dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:text">Registro por Categorias</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="TextoDatos">
+        <item name="android:textSize">20sp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textColorHint">@color/green</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+
+</resources>

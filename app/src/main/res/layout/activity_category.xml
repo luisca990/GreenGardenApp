@@ -18,11 +18,32 @@
         />
 
     <Button
-        android:id="@+id/ejemploCategoria"
+        android:id="@+id/ejemploCategoriaagua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EJEMPLO PARA NAVEGAR - CATEGORIAS"
+        android:text="EJEMPLO PARA NAVEGAR - agua"
         android:layout_margin="200sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/ejemploCategoriaabono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EJEMPLO PARA NAVEGAR - abono"
+        android:layout_marginTop="300sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <Button
+        android:id="@+id/ejemploCategoriacompost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EJEMPLO PARA NAVEGAR - compost"
+        android:layout_marginTop="400sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

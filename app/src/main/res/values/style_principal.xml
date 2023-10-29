@@ -10,5 +10,12 @@
         <item name="android:radius">20dp</item>
     </style>
 
+    <style name="LogoTemp">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/logo_temporal</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">30sp</item>
+    </style>
 
 </resources>

@@ -3,10 +3,10 @@
 
     <style name="linearLayoutTheme">
         <item name="cornerRadius">20dp</item>
-        <item name="android:paddingLeft">20dp</item>
-        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:layout_margin">25dp</item>
+        <item name="android:layout_margin">45dp</item>
         <item name="android:radius">20dp</item>
         <item name="android:background">@drawable/round_layout</item>
     </style>
@@ -78,7 +78,6 @@
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/green</item>
-        <item name="android:layout_marginBottom">25dp</item>
     </style>
 
 </resources>
