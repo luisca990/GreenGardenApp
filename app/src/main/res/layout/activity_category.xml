@@ -64,7 +64,7 @@
                 style="@style/ParrafosCategorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="El consumo de agua se refiere a la cantidad de agua utilizada para el riego y otros propósitos relacionados con el cultivo de plantas en su jardín urbano."
+                android:text="&quot;Haz clic en la imagen&quot;&#10;El consumo de agua se refiere a la cantidad de agua utilizada para el riego y otros propósitos relacionados con el cultivo de plantas en su jardín urbano."
                  />
 
             <TextView
@@ -85,7 +85,7 @@
                 style="@style/ParrafosCategorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="El consumo de abono se refiere a la cantidad de materia orgánica o inorgánica que estás utilizando para enriquecer el suelo de tu jardín."
+                android:text="&quot;Haz clic en la imagen&quot;&#10;El consumo de abono se refiere a la cantidad de materia orgánica o inorgánica que estás utilizando para enriquecer el suelo de tu jardín."
                  />
 
             <TextView
@@ -106,7 +106,7 @@
                 style="@style/ParrafosCategorias"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿Qué es el compost urbano? El compostaje comunitario es la gestión de los residuos orgánicos biodegradables de un colectivo de gente (comunidad de vecinos, pueblo, etc.) con el fin de obtener un recurso valioso para su aplicación en jardinería municipal o reparto entre las personas participantes."
+                android:text="&quot;Haz clic en la imagen&quot;&#10;¿Qué es el compost urbano? El compostaje comunitario es la gestión de los residuos orgánicos biodegradables de un colectivo de gente (comunidad de vecinos, pueblo, etc.) con el fin de obtener un recurso valioso para su aplicación en jardinería municipal o reparto entre las personas participantes."
 
                 />
         </LinearLayout>
