@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +14,8 @@ public class CategoryActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        Button buttonCategoriaagua = findViewById(R.id.ejemploCategoriaagua);
-        buttonCategoriaagua.setOnClickListener(new View.OnClickListener() {
+        ImageButton buttonCategoriaAgua = findViewById(R.id.imageButtonAgua);
+        buttonCategoriaAgua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, CategoryAguaActivity.class);
@@ -22,8 +23,8 @@ public class CategoryActivity extends AppCompatActivity{
             }
         });
 
-        Button buttonCategoriaabono = findViewById(R.id.ejemploCategoriaabono);
-        buttonCategoriaabono.setOnClickListener(new View.OnClickListener() {
+        ImageButton buttonCategoriaAbono = findViewById(R.id.imageButtonAbono);
+        buttonCategoriaAbono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, CategoryAbonoActivity.class);
@@ -31,8 +32,8 @@ public class CategoryActivity extends AppCompatActivity{
             }
         });
 
-        Button buttonCategoriacompost = findViewById(R.id.ejemploCategoriacompost);
-        buttonCategoriacompost.setOnClickListener(new View.OnClickListener() {
+        ImageButton buttonCategoriaCompost = findViewById(R.id.imageButtonCompost);
+        buttonCategoriaCompost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, CategoryCompostActivity.class);
