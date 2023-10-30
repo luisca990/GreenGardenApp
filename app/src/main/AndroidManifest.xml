@@ -40,6 +40,18 @@
             android:name=".TipsConsejosActivitys"
             android:exported="false"/>
         <activity
+            android:name=".TipsConsejosActivitysRiego"
+            android:exported="false"/>
+        <activity
+            android:name=".TipsConsejosActivitysEnergia"
+            android:exported="false"/>
+        <activity
+            android:name=".TipsConsejosActivitysAbono"
+            android:exported="false"/>
+        <activity
+            android:name=".TipsConsejosActivitysReciclaje"
+            android:exported="false"/>
+        <activity
             android:name=".CategoryActivity"
             android:exported="false"/>
         <activity
