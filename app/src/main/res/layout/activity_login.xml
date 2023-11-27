@@ -60,12 +60,14 @@
             android:text="@string/welcome_text" />
 
         <EditText
+            android:id="@+id/edtEmailLogin"
             style="@style/edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email_text" />
 
         <EditText
+            android:id="@+id/edtPasswordLogin"
             style="@style/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
