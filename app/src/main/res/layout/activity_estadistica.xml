@@ -23,6 +23,7 @@
         <ImageButton
             android:id="@+id/LogoTemp"
             style="@style/LogoTemp"
+            android:scaleType="fitXY"
             android:layout_gravity="center_horizontal"
             />
 
@@ -56,6 +57,10 @@
             card_view:cardCornerRadius="10dp"
             android:background="@color/gray"
             android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt_title_e1"
@@ -63,6 +68,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_title_e1"
                 style="@style/txt_title_cv_esta"/>
+
+
+                <!-- Agrega cualquier otro contenido que desees dentro del CardView -->
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"

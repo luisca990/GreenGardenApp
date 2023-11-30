@@ -28,6 +28,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -38,4 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    //Librería para gráficos estadísticos
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 }
