@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipsConsejosActivitysReciclaje">
+    <FrameLayout
+        android:id="@+id/headerLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="45dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@color/green" />
+
+        <ImageButton
+            android:id="@+id/LogoTemp"
+            style="@style/LogoTemp"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerLine"
+        app:layout_constraintBottom_toTopOf="@+id/footerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="50dp">
+
+            <ImageView
+                android:id="@+id/imageviewriego_Agua"
+                style="@style/CategoryBotones"
+                android:src="@drawable/abono"
+                />
+            <TextView
+                android:id="@+id/text_energia"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.Separación de Residuos: Separa tus residuos en papel, cartón, vidrio, plástico y metal."
+                />
+            <TextView
+                android:id="@+id/text_tip2"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2.Contenedores de Reciclaje: Utiliza contenedores de reciclaje en tu hogar y lugar de trabajo."
+                />
+
+            <TextView
+                android:id="@+id/text_tip3"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3.Reduce y Reutiliza: Reduce el consumo y reutiliza objetos siempre que sea posible."
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/text_tip4"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4.Recicla Electrónicos: Recicla dispositivos electrónicos viejos o en desuso en lugares especializados."
+                android:paddingTop="5dp"/>
+            <ImageView
+                android:id="@+id/imageButtonAbono"
+                style="@style/CategoryBotones"
+                android:src="@drawable/abono2"
+                />
+
+            <TextView
+                android:id="@+id/text_tip5"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5.Bolsas Reutilizables: Usa bolsas reutilizables en lugar de bolsas de plástico."
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/text_tip6"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6.Compostaje: Composta los residuos orgánicos para reducir la cantidad de desechos."
+                />
+
+            <TextView
+                android:id="@+id/text_tip7"
+                style="@style/TitulosCategorias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7.Reciclaje de Pilas: Recicla pilas y baterías en lugares de recolección adecuados. "
+
+                />
+            <ImageView
+                android:id="@+id/imageButtonCompost"
+                style="@style/CategoryBotones"
+                android:src="@drawable/abono3" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Línea y texto en el pie de página -->
+    <FrameLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Línea en el pie de página -->
+        <View
+            android:id="@+id/footerLine"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/green"/>
+
+        <!-- Texto en el pie de página -->
+        <TextView
+            android:id="@+id/footerText"
+            style="@style/footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reciclaje"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
