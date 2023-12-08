@@ -14,7 +14,6 @@
         app:layout_constraintTop_toTopOf="parent"
         >
 
-        <!-- Línea como encabezado -->
         <View
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -26,13 +25,30 @@
             android:layout_gravity="center_horizontal"
             />
 
-        <TextView
-            android:id="@+id/TextoCategorias"
-            style="@style/TextoCategorias"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/title_activity_esta" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TextoCategorias"
+                style="@style/TextoCategorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/title_activity_esta" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/insert_consume"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
 
 
     </FrameLayout>
@@ -63,6 +79,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_title_e1"
                 style="@style/txt_title_cv_esta"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chartWater"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="120dp"/>
+
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -80,6 +104,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_title_e2"
                 style="@style/txt_title_cv_esta"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="120dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -97,6 +126,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/txt_title_e3"
                 style="@style/txt_title_cv_esta"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_height="120dp"/>
         </androidx.cardview.widget.CardView>
 
 

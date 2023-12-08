@@ -48,13 +48,14 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
+            android:id="@+id/btn_return"
             style="@style/btn_register_register"
             android:layout_width="wrap_content"
             android:paddingStart="50dp"
             android:paddingEnd="50dp"
             android:layout_margin="20dp"
             android:layout_height="wrap_content"
-            android:text="CONSUMO" />
+            android:text="Volver" />
 
 
         <TextView
@@ -65,6 +66,7 @@
             android:text="AGUA" />
 
         <EditText
+            android:id="@+id/inputLitros"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,17 +74,25 @@
             android:hint="Cant. Agua (Litros)"/>
 
         <EditText
+            android:id="@+id/inputCosto"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:hint="Costo de Consumo"/>
 
-        <EditText
-            style="@style/TextoDatos"
+<!--        <EditText-->
+<!--            android:id="@+id/inputMes"-->
+<!--            style="@style/TextoDatos"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Mes de Consumo"/>-->
+
+        <Spinner
+            android:id="@+id/spinMonths"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mes de Consumo"/>
+            android:layout_height="wrap_content"/>
+
 
         <Button
             android:id="@+id/btn_calcular_agua"
