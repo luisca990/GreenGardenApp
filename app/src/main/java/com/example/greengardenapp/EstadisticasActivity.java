@@ -2,9 +2,9 @@ package com.example.greengardenapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,13 +14,19 @@ import androidx.room.Room;
 import com.example.greengardenapp.database.DataBase;
 import com.example.greengardenapp.models.WaterModel;
 import com.github.mikephil.charting.charts.BarChart;
+
+
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+
 import com.github.mikephil.charting.utils.ColorTemplate;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class EstadisticasActivity extends AppCompatActivity {
 
@@ -85,10 +91,21 @@ public class EstadisticasActivity extends AppCompatActivity {
         BarData data = new BarData(labels, bardataset);
         bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
         graphWater.setData(data);
+
+        //setting graph
+        //set format of values axis Y to $2
+        YAxis yAxis = graphWater.getAxisLeft();
+        yAxis.setValueFormatter((value, yAxis1) -> "$"+value);
+        YAxis yAxisRight = graphWater.getAxisRight();
+        yAxisRight.setEnabled(false);
+        graphWater.setDescription("");
+        graphWater.getLegend().setEnabled(false);
+
     }
 
     private Integer calculateValue(int water, int consume){
         int result = water*consume;
         return result;
     }
+
 }
