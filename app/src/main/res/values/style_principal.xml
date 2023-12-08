@@ -12,10 +12,10 @@
 
     <style name="LogoTemp">
         <item name="android:scaleType">fitCenter</item>
-        <item name="android:background">@drawable/logo_temporal</item>
-        <item name="android:layout_width">80dp</item>
-        <item name="android:layout_height">80dp</item>
-        <item name="android:layout_margin">30sp</item>
+        <item name="android:background">@drawable/logo_app</item>
+        <item name="android:layout_width">110dp</item>
+        <item name="android:layout_height">110dp</item>
+        <item name="android:layout_margin">10sp</item>
     </style>
 
 </resources>

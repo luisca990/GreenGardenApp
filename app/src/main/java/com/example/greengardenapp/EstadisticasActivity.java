@@ -79,7 +79,7 @@ public class EstadisticasActivity extends AppCompatActivity {
 
         }
 
-        BarDataSet bardataset = new BarDataSet(entries, "Consumo");
+        BarDataSet bardataset = new BarDataSet(entries, "Cells");
 
 
         BarData data = new BarData(labels, bardataset);
