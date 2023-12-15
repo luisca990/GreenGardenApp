@@ -7,6 +7,8 @@
     android:background="@color/background_gray"
     tools:context=".CategoryAbonoActivity">
 
+
+
     <FrameLayout
         android:id="@+id/headerLine"
         android:layout_width="match_parent"
@@ -19,6 +21,13 @@
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:background="@color/green"/>
+
+        <ImageButton
+            android:id="@+id/LogoBack"
+            style="@style/IconBack"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start" />
 
         <ImageButton
             android:id="@+id/LogoTemp"
@@ -48,6 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
+            android:id="@+id/btn_test"
             style="@style/btn_register_register"
             android:layout_width="wrap_content"
             android:paddingStart="50dp"
@@ -65,6 +75,7 @@
             android:text="ABONO" />
 
         <EditText
+            android:id="@+id/inputKilogramos"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,17 +83,17 @@
             android:hint="Cant. Abono (Kg)"/>
 
         <EditText
+            android:id="@+id/inputCosto"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:hint="Costo de Consumo"/>
 
-        <EditText
-            style="@style/TextoDatos"
+        <Spinner
+            android:id="@+id/spinMonths"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mes de Consumo"/>
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_calcular_abono"

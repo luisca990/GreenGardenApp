@@ -23,7 +23,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_esta">Estadísticas</string>
     <string name="txt_title_e1">Consumo de agua en el año</string>
-    <string name="txt_title_e2">Consumo de agua por planta</string>
+    <string name="txt_title_e2">Consumo de abono en el año</string>
     <string name="txt_title_e3">Costo y consumo de energía</string>
     <string name="insert_consume">Para insertar datos seleccione el titulo de cada categoria</string>
 

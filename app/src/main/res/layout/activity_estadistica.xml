@@ -20,6 +20,13 @@
             android:background="@color/green"/>
 
         <ImageButton
+            android:id="@+id/LogoBack"
+            style="@style/IconBack"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start" />
+
+        <ImageButton
             android:id="@+id/LogoTemp"
             style="@style/LogoTemp"
             android:scaleType="fitXY"
@@ -109,10 +116,11 @@
                 android:id="@+id/txt_title_e2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_title_e2"
-                style="@style/txt_title_cv_esta"/>
+                style="@style/txt_title_cv_esta"
+                android:text="@string/txt_title_e2"/>
 
-            <com.github.mikephil.charting.charts.BarChart
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartFertilizer"
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:layout_height="120dp"/>
@@ -164,7 +172,7 @@
             style="@style/footer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="VOLVER"/>
+            android:text="TABLERO DE CONTROL"/>
     </FrameLayout>
 
 
