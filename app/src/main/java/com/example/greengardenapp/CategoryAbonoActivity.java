@@ -53,7 +53,7 @@ public class CategoryAbonoActivity extends AppCompatActivity {
                 String inputPesoText = inputKilogramos.getText().toString();
                 String inputCostoText = inputCosto.getText().toString();
                 String inputMesText = inputMonths.getSelectedItem().toString();
-                showToast("HOLA "+inputPesoText+" "+inputCostoText+" "+inputMesText);
+                Log.d("HOLA ",inputPesoText+" "+inputCostoText+" "+inputMesText);
                 Log.d("SPINNER ES", inputMesText);
                 if(validateInputs(inputPesoText,inputCostoText,inputMesText)){
                     try {
@@ -81,14 +81,6 @@ public class CategoryAbonoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent back = new Intent(CategoryAbonoActivity.this, PrincipalActivity.class);
                 startActivity(back);
-            }
-        });
-        buttonCalcularAbono.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Iniciar LoginActivity
-                Intent login = new Intent(CategoryAbonoActivity.this, EstadisticasActivity.class);
-                startActivity(login);
             }
         });
 
