@@ -21,6 +21,13 @@
             android:background="@color/green"/>
 
         <ImageButton
+            android:id="@+id/LogoBack"
+            style="@style/IconBack"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start" />
+
+        <ImageButton
             android:id="@+id/LogoTemp"
             style="@style/LogoTemp"
             android:layout_gravity="center_horizontal"
@@ -65,6 +72,7 @@
             android:text="COMPOST" />
 
         <EditText
+            android:id="@+id/txtInAmong"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,17 +80,17 @@
             android:hint="Cant. Residuos Orgánicos "/>
 
         <EditText
+            android:id="@+id/txtInPrice"
             style="@style/TextoDatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:hint="Costo de Consumo"/>
 
-        <EditText
-            style="@style/TextoDatos"
+        <Spinner
+            android:id="@+id/spinMonths"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Mes de Consumo"/>
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_calcular_compost"

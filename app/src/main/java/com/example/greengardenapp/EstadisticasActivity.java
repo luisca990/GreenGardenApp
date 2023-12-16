@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.room.Room;
 
 import com.example.greengardenapp.database.DataBase;
+import com.example.greengardenapp.models.CompostModel;
 import com.example.greengardenapp.models.FertilizerModel;
 import com.example.greengardenapp.models.WaterModel;
 import com.github.mikephil.charting.charts.BarChart;
@@ -40,9 +41,9 @@ import java.util.List;
 
 public class EstadisticasActivity extends AppCompatActivity {
 
-    CardView cardWater,cardFertilizer;
+    CardView cardWater,cardFertilizer,cardCompost;
     BarChart graphWater;
-    LineChart graphFertilizer;
+    LineChart graphFertilizer,graphCompost;
     ImageButton btnReturn;
 
     @Override
@@ -58,6 +59,11 @@ public class EstadisticasActivity extends AppCompatActivity {
         //variables para el gráfico de consumo de abono
         cardFertilizer=findViewById(R.id.card_view_e2);
         graphFertilizer=findViewById(R.id.chartFertilizer);
+
+        //variables para el gráfico de consumo de compost
+        cardCompost=findViewById(R.id.card_view_e3);
+        graphCompost=findViewById(R.id.chartCompost);
+
 
         DataBase database = Room.databaseBuilder(
                 getApplicationContext(),
@@ -89,6 +95,18 @@ public class EstadisticasActivity extends AppCompatActivity {
                 startActivity(fertilizer);
             }
         });
+
+        List<CompostModel> listDataCompost = database.daoCompost().getCompost();
+
+        graphCompost(listDataCompost);
+
+        cardCompost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent compost = new Intent(EstadisticasActivity.this, CategoryCompostActivity.class);
+                startActivity(compost);
+            }
+        });
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +117,7 @@ public class EstadisticasActivity extends AppCompatActivity {
         });
 
     }
+
 
 
 
@@ -196,6 +215,62 @@ public class EstadisticasActivity extends AppCompatActivity {
         graphFertilizer.setDescription("");
         graphFertilizer.getLegend().setEnabled(true);
 
+    }
+
+    private void graphCompost(List<CompostModel> listDataCompost) {
+        ArrayList<Entry> entries = new ArrayList<>();
+        ArrayList<Entry> entries2 = new ArrayList<>();
+        ArrayList<String> labels = new ArrayList<String>();
+        for (int i = 0; i < listDataCompost.size(); i++) {
+            entries.add(
+                    new Entry(
+                            Float.parseFloat(String.valueOf(listDataCompost.get(i).getAmountCompost())),
+                            i
+                    ));
+            entries2.add(
+                    new Entry(
+                            Float.parseFloat(String.valueOf(listDataCompost.get(i).getPriceConsume())),
+                            i
+                    ));
+
+            labels.add(
+                    listDataCompost.get(i).getMonth().substring(0,3)
+            );
+        }
+
+        LineDataSet lineDataSet1 = new LineDataSet(entries, "Consumo en kilos (Kg)");
+        LineDataSet lineDataSet2 = new LineDataSet(entries2, "Valor del compost ($)");
+
+        lineDataSet1.setColor(Color.RED);
+        lineDataSet2.setColor(Color.BLUE);
+        lineDataSet1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return value + " Kg";
+            }
+        });
+
+        lineDataSet2.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return "$" + value;
+            }
+        });
+
+        List<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(lineDataSet1);
+        dataSets.add(lineDataSet2);
+        LineData data = new LineData(labels,dataSets);
+        graphCompost.setData(data);
+
+// Configurar el gráfico
+        YAxis yAxis = graphCompost.getAxisLeft();
+        //yAxis.setValueFormatter((value, yAxis1) -> "$" + value);
+        YAxis yAxisRight = graphCompost.getAxisRight();
+        //yAxisRight.setValueFormatter((value, yAxis1) -> value +" Kg");
+        yAxisRight.setEnabled(true);
+        graphCompost.setDescription("");
+        graphCompost.getLegend().setEnabled(true);
     }
 
 }

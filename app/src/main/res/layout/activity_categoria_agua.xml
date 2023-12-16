@@ -21,6 +21,13 @@
             android:background="@color/green"/>
 
         <ImageButton
+            android:id="@+id/LogoBack"
+            style="@style/IconBack"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start" />
+
+        <ImageButton
             android:id="@+id/LogoTemp"
             style="@style/LogoTemp"
             android:layout_gravity="center_horizontal"

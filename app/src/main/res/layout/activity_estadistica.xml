@@ -142,7 +142,8 @@
                 android:text="@string/txt_title_e3"
                 style="@style/txt_title_cv_esta"/>
 
-            <com.github.mikephil.charting.charts.BarChart
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartCompost"
                 android:layout_width="match_parent"
                 android:layout_marginTop="30dp"
                 android:layout_height="120dp"/>

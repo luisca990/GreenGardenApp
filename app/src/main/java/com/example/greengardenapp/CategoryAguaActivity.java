@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import com.example.greengardenapp.models.WaterModel;
 public class CategoryAguaActivity extends AppCompatActivity {
 
     Button btnReturn;
+    ImageButton btnBack;
     EditText inputLitros, inputCosto, inputMes;
     Spinner inputMonths;
     @Override
@@ -31,6 +33,7 @@ public class CategoryAguaActivity extends AppCompatActivity {
         inputMonths = findViewById(R.id.spinMonths);
         Button buttonCalcularAgua = findViewById(R.id.btn_calcular_agua);
         btnReturn = findViewById(R.id.btn_return);
+        btnBack=findViewById(R.id.LogoBack);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.months, android.R.layout.simple_list_item_1);
         inputMonths.setAdapter(adapter);
@@ -68,6 +71,13 @@ public class CategoryAguaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent back = new Intent(CategoryAguaActivity.this, EstadisticasActivity.class);
+                startActivity(back);
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent back = new Intent(CategoryAguaActivity.this, PrincipalActivity.class);
                 startActivity(back);
             }
         });
