@@ -1,6 +1,7 @@
 package com.example.greengardenapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.view.View;
@@ -27,7 +28,10 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
 
 import java.util.ArrayList;
@@ -101,7 +105,6 @@ public class EstadisticasActivity extends AppCompatActivity {
     private void graphWater(List<WaterModel> list){
         ArrayList<BarEntry> entries = new ArrayList<>();
         ArrayList<String> labels = new ArrayList<String>();
-        System.out.println(list.size()+"Hola Hola");
         for (int i = 0; i < list.size(); i++) {
             entries.add(
                     new BarEntry(
@@ -140,33 +143,59 @@ public class EstadisticasActivity extends AppCompatActivity {
 
     private void graphFertilizer(List<FertilizerModel> listDataFertilizer) {
         ArrayList<Entry> entries = new ArrayList<>();
+        ArrayList<Entry> entries2 = new ArrayList<>();
         ArrayList<String> labels = new ArrayList<String>();
-        System.out.println(listDataFertilizer.size()+"Hola Hola");
         for (int i = 0; i < listDataFertilizer.size(); i++) {
             entries.add(
                     new Entry(
                             Float.parseFloat(String.valueOf(listDataFertilizer.get(i).getAmountFertilizer())),
                             i
                     ));
+            entries2.add(
+                    new Entry(
+                            Float.parseFloat(String.valueOf(listDataFertilizer.get(i).getPriceConsume())),
+                            i
+                    ));
 
             labels.add(
-                    listDataFertilizer.get(i).getMonth()
+                    listDataFertilizer.get(i).getMonth().substring(0,3)
             );
         }
 
-        LineDataSet lineDataSet = new LineDataSet(entries, "Cells");
+        LineDataSet lineDataSet1 = new LineDataSet(entries, "Consumo en kilos (Kg)");
+        LineDataSet lineDataSet2 = new LineDataSet(entries2, "Valor del abono ($)");
 
-        LineData data = new LineData(labels, lineDataSet);
-        lineDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        lineDataSet1.setColor(Color.RED);
+        lineDataSet2.setColor(Color.BLUE);
+        lineDataSet1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return value + " Kg";
+            }
+        });
+
+        lineDataSet2.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return "$" + value;
+            }
+        });
+
+        List<ILineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(lineDataSet1);
+        dataSets.add(lineDataSet2);
+        LineData data = new LineData(labels,dataSets);
         graphFertilizer.setData(data);
 
 // Configurar el gráfico
         YAxis yAxis = graphFertilizer.getAxisLeft();
-        yAxis.setValueFormatter((value, yAxis1) -> "$" + value);
+        //yAxis.setValueFormatter((value, yAxis1) -> "$" + value);
         YAxis yAxisRight = graphFertilizer.getAxisRight();
-        yAxisRight.setEnabled(false);
+        //yAxisRight.setValueFormatter((value, yAxis1) -> value +" Kg");
+        yAxisRight.setEnabled(true);
         graphFertilizer.setDescription("");
-        graphFertilizer.getLegend().setEnabled(false);
+        graphFertilizer.getLegend().setEnabled(true);
+
     }
 
 }
